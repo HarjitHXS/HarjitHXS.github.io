@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            background-color: #f7eaea;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #ff6b6b;
+        }
+
+        p {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .birthday-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+
+        h2 {
+            color: #ff6b6b;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            background-color: rgba(255, 192, 203, 0.7); /* Transparent Pink */
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Happy Birthday!</h1>
+    <p>Wishing you a day filled with joy and happiness.</p>
+    <p>May all your dreams and wishes come true.</p>
+    <p>Celebrate and enjoy your special day!</p>
+    <button onclick="showBirthdayCard()">Open Birthday Card</button>
+</div>
+
+<div class="birthday-card" id="birthdayCard">
+    <div class="balloon" style="top: 100px; left: 20px;"></div>
+    <div class="balloon" style="top: 80px; left: 60px;"></div>
+    <div class="balloon" style="top: 120px; left: 100px;"></div>
+    <div class="balloon" style="top: 160px; left: 140px;"></div>
+    <h2>You are turning 21 today!</h2>
+    <p>Celebrate this milestone with joy and excitement.</p>
+    <div class="balloon" style="bottom: 100px; right: 20px;"></div>
+    <div class="balloon" style="bottom: 80px; right: 60px;"></div>
+    <div class="balloon" style="bottom: 120px; right: 100px;"></div>
+    <div class="balloon" style="bottom: 160px; right: 140px;"></div>
+    <button onclick="hideBirthdayCard()">Close</button>
+</div>
+
+<script>
+    function showBirthdayCard() {
+        document.getElementById('birthdayCard').style.display = 'block';
+    }
+
+    function hideBirthdayCard() {
+        document.getElementById('birthdayCard').style.display = 'none';
+    }
+</script>
+</body>
+</html>
